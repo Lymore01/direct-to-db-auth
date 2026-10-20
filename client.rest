@@ -1,0 +1,19 @@
+@base_url=http://localhost:3000
+@alice_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMTExMTExMS0xMTExLTExMTEtMTExMS0xMTExMTExMTExMTEiLCJpYXQiOjE3OTI0ODExMTV9.QGzzQG8K2EhBumagwT_G6M_h3VA9dRBUKwfpfn_RgPU
+@bob_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMjIyMjIyMi0yMjIyLTIyMjItMjIyMi0yMjIyMjIyMjIyMjIiLCJpYXQiOjE3OTI0ODE5MjJ9.5LmpxjFL2FfM_R4zbMOE3Ie5NlptWi3kIP-kUWNNVxk
+
+###
+POST {{base_url}}/api/notes
+Authorization: Bearer {{alice_token}}
+Content-Type: application/json
+
+{
+    "title": "My Note",
+    "content": "This is the content of my note."
+}
+
+###
+GET {{base_url}}/api/notes
+Authorization: Bearer {{alice_token}}
+
+
