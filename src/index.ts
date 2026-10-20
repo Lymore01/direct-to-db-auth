@@ -17,7 +17,7 @@ async function executeWithUserContext(token: any, callback: any) {
   const dbClient = await pool.connect();
 
   try {
-    let role = "app_anonymous";
+    let role = "app_anon";
     let claimsJson = "{}";
 
     if (token) {

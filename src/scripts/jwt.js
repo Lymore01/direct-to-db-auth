@@ -13,3 +13,4 @@ console.log("JWT Token:", data);
 
 const decoded = jwt.verify(data, "super-secret-jwt-key");
 console.log("Decoded Token:", decoded);
+
